@@ -44,8 +44,9 @@ angular.module('hikexpert', [
         request: function(request) {
           // Transform ALL $http calls to that requests that go to '/'
           // instead go to a different origin, in this case localhost:3000
+          // ***********************************
           if (request.url.charAt(0) === '/'){
-            request.url = 'http://localhost:8100' + request.url;
+            request.url = 'https://hike-overflow-api-server.herokuapp.com' + request.url;
           }
           return request;
         }

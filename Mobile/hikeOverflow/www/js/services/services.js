@@ -1,7 +1,8 @@
 angular.module('hikexpert.services', ['ionic'])
 
 .factory('Home', function($http){
-   var baseUrl = 'http://localhost:8100';
+   // ***********************************
+   var baseUrl = 'https://hike-overflow-api-server.herokuapp.com';
   var getCoords = function(userInfo){
     return $http({
       method: 'POST',
@@ -41,7 +42,8 @@ angular.module('hikexpert.services', ['ionic'])
 })
 
 .factory('Auth', function($http, $location, $window) {
-    var baseUrl = 'http://localhost:8100';
+   // **********************************************************
+    var baseUrl = 'https://hike-overflow-api-server.herokuapp.com';
   var signin = function(user) {
     return $http({
       method: 'POST',
